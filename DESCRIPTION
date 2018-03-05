@@ -1,0 +1,21 @@
+Package: Rsti
+Title: Ein Textbasiertes Lernspiel Für Erstklässler
+Version: 0.1.0
+Authors@R: person("Sebastian", "Meyer",
+                  email = "seb.meyer@fau.de",
+                  role = c("aut", "cre"))
+Description: Eine textbasierte, spielerische Lernumgebung für Erstklässler,
+    die Lesen, Schreiben, Rechnen und logisches Denken fördert.
+URL: https://github.com/WastlM/Rsti
+BugReports: https://github.com/WastlM/Rsti/issues
+License: GPL (>=2)
+Imports: tools, stats
+Encoding: UTF-8
+Collate: 
+    'ask.R'
+    'los.R'
+    'spiel_Datum.R'
+    'spiel_Tiere.R'
+    'spiel_Detektiv.R'
+    'spiel_Rechnen.R'
+RoxygenNote: 6.0.1
