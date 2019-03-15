@@ -9,7 +9,7 @@ Rechnen und logisches Denken.
 
 ```r
 # install.packages("remotes")
-remotes::install_github("WastlM/Rsti")
+remotes::install_github("bastistician/Rsti")
 ```
 
 ## Spielstart
