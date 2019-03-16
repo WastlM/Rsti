@@ -18,9 +18,10 @@
 ##' 
 ##' @param name Der Name des Spielers.
 ##' @param minimum,maximum Erlaubter Ergebnisbereich.
+##' @param zahlengrenze Größte Zahl mit der gerechnet werden soll.
 ##' @export
 
-spiel_Rechnen <- function (name, minimum = 0, maximum = 20)
+spiel_Rechnen <- function (name, minimum = 0, maximum = 20, zahlengrenze = 9)
 {
     cat("RECHNEN", "-------\n", sep = "\n")
     cat("Ich habe mir ein paar Rechenaufgaben überlegt.",
@@ -29,19 +30,19 @@ spiel_Rechnen <- function (name, minimum = 0, maximum = 20)
     ntask <- ask09("Wieviele Aufgaben möchtest du haben?")
     cat("\nAlso", ntask, "Aufgaben. Auf geht's!\n")
     replicate(ntask, {
-        rechenaufgabe(name, minimum, maximum)
+        rechenaufgabe(name, minimum, maximum, zahlengrenze)
         cat("\n")
     })
     cat("Jetzt hast du die", ntask, "Aufgaben geschafft. Prima!\n\n")
     return(invisible())
 }
 
-rechenaufgabe <- function (name, minimum = 0, maximum = 20)
+rechenaufgabe <- function (name, minimum = 0, maximum = 20, zahlengrenze = 9)
 {
     result <- -Inf
     while(result < minimum || result > maximum) {
         signs <- sample(list("+", "-", c("+", "-")), 1)[[1]]
-        numbers <- sample(0:9, length(signs)+1, replace = TRUE)
+        numbers <- sample(0:zahlengrenze, length(signs)+1, replace = TRUE)
         task <- paste(numbers, c(signs, ""), collapse = " ")
         result <- eval(parse(text = task))
     }

@@ -4,12 +4,14 @@
 \alias{spiel_Rechnen}
 \title{Rechenaufgaben mit Plus und Minus}
 \usage{
-spiel_Rechnen(name, minimum = 0, maximum = 20)
+spiel_Rechnen(name, minimum = 0, maximum = 20, zahlengrenze = 9)
 }
 \arguments{
 \item{name}{Der Name des Spielers.}
 
 \item{minimum, maximum}{Erlaubter Ergebnisbereich.}
+
+\item{zahlengrenze}{Größte Zahl mit der gerechnet werden soll.}
 }
 \description{
 In diesem Spiel wird eine selbst zu wählende Anzahl von Rechenaufgaben
