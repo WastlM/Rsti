@@ -1,7 +1,7 @@
 ################################################################################
 ### Rechenaufgaben mit Plus und Minus
 ###
-### Copyright (C) 2018 Sebastian Meyer <seb.meyer@fau.de>
+### Copyright (C) 2018-2019 Sebastian Meyer <seb.meyer@fau.de>
 ###
 ### This file is part of the R package "Rsti",
 ### free software under the terms of the GNU General Public License, version 2,
@@ -38,7 +38,7 @@ spiel_Rechnen <- function (name, minimum = 0, maximum = 20)
 
 rechenaufgabe <- function (name, minimum = 0, maximum = 20)
 {
-    result <- -1
+    result <- -Inf
     while(result < minimum || result > maximum) {
         signs <- sample(list("+", "-", c("+", "-")), 1)[[1]]
         numbers <- sample(0:9, length(signs)+1, replace = TRUE)
